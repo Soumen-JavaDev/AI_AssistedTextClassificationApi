@@ -1,0 +1,32 @@
+
+# ─── IDE and OS ───────────────────────────────
+.idea/
+*.iml
+*.iws
+*.ipr
+.DS_Store
+Thumbs.db
+
+# ─── Maven ────────────────────────────────────
+target/
+*.jar
+*.war
+*.class
+*.log
+
+# ─── Environment / Secrets ────────────────────
+.env
+.env.*
+!.env.example
+*.env.local
+
+# ─── Spring Boot ──────────────────────────────
+*.pid
+spring.pid
+
+# ─── VS Code ──────────────────────────────────
+.vscode/
+
+# ─── Temporary files ──────────────────────────
+*.tmp
+*.bak

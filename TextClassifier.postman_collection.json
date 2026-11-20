@@ -1,0 +1,145 @@
+{
+  "info": {
+    "name": "AI-Assisted Text Classification API",
+    "description": "Postman collection for the Indus Net Technologies text classification internship assignment",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Classify - Complaint",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"text\": \"I am unable to access my account even after resetting my password multiple times. This is very frustrating.\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/v1/classify",
+          "host": ["{{base_url}}"],
+          "path": ["api", "v1", "classify"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Classify - Query",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"text\": \"What are your customer support hours and how can I reach your team?\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/v1/classify",
+          "host": ["{{base_url}}"],
+          "path": ["api", "v1", "classify"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Classify - Feedback",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"text\": \"Your new dashboard design is clean and intuitive. I especially like the dark mode feature. Would love to see calendar integration added next.\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/v1/classify",
+          "host": ["{{base_url}}"],
+          "path": ["api", "v1", "classify"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Classify - Other",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"text\": \"The quick brown fox jumps over the lazy dog.\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/v1/classify",
+          "host": ["{{base_url}}"],
+          "path": ["api", "v1", "classify"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Error - Empty Text",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"text\": \"\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/v1/classify",
+          "host": ["{{base_url}}"],
+          "path": ["api", "v1", "classify"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Error - Missing text field",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/v1/classify",
+          "host": ["{{base_url}}"],
+          "path": ["api", "v1", "classify"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Error - Missing request body",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "url": {
+          "raw": "{{base_url}}/api/v1/classify",
+          "host": ["{{base_url}}"],
+          "path": ["api", "v1", "classify"]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8080",
+      "type": "string"
+    }
+  ]
+}
